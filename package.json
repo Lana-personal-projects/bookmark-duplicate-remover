@@ -1,20 +1,17 @@
 {
-  "name": "iphone-safari-duplicate-remover",
+  "name": "bookmark-duplicate-remover",
   "version": "1.0.0",
-  "description": "",
+  "description": "remove duplicate bookmark from netscape-bookmark-file-1",
   "main": "remover.js",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node remover.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "lana",
   "license": "ISC",
-  "dependencies": {
-    "jsdom": "^15.2.0"
-  },
   "devDependencies": {
-    "@types/jsdom": "^12.2.4",
     "@types/node": "^12.12.3"
   }
 }
