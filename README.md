@@ -1,8 +1,8 @@
-# safari-duplicate-bookmark-remover
-remove duplicate bookmarks from 3uTools exported file
+# bookmark-duplicate-remover
+remove duplicate bookmarks from netscape-bookmark-file html
 
 ### Usage
-Clone and install dependencies. Then:
+Clone or download to your machine. Then:
 
 ```
 node remover.js [path-of-exported]
