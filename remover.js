@@ -31,9 +31,15 @@ const path = resolve(process.argv.slice(2).join(" "));
             }
         }
         const final = dataChunks.filter(val => val).join("\r\n");
-        console.log("Writing changes to file...");
-        await writeFile(path, final);
-        console.log(`Removed ${removedCount} duplicate. ${bookmarks.length - removedCount} bookmarks left.`);
+        if (removedCount > 0) {
+            console.log("Backing up old file...");
+            await writeFile(`${path}.old`, data);
+            console.log("Writing changes to file...");
+            await writeFile(path, final);
+            console.log(`Removed ${removedCount} duplicate. ${bookmarks.length - removedCount} bookmarks left.`);
+        } else {
+            console.log("No duplicate found.");
+        }
     } else {
         console.log("Invalid file!");
     }
